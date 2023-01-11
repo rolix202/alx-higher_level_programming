@@ -1,4 +1,9 @@
 #!/bin/usr/python3
 
 def square_matrix_simple(matrix=[]):
-    return [[val**2 for val in row] for row in matrix]
+    def square_cells(array):
+        result = []
+        for cell in array:
+            result.append(cell ** 2)
+        return result
+    return list(map(square_cells, matrix))
